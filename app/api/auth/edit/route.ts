@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { api } from "../../api";
-import type { ApiError } from "../../api";
+import type { ApiError } from "@/lib/api/api"; 
 
 export async function PATCH(req: Request) {
   const cookieStore = cookies();
