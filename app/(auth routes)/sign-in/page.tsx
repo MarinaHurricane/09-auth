@@ -29,7 +29,8 @@ export default function SignInPage() {
     } catch (error) {
       setError(
         (error as ApiError).response?.data?.error ??
-          (error as ApiError).message 
+          (error as ApiError).message ??
+          "Login failed"
       );
     }
   };
@@ -66,7 +67,7 @@ export default function SignInPage() {
           </button>
         </div>
 
-        {error && <p className={css.error}>Error</p>}
+        {error && <p className={css.error}>{error}</p>}
       </form>
     </main>
   );
