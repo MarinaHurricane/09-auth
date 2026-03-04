@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/api/clientApi";
 import { LoginRequest } from "@/lib/api/api";
-import { ApiError } from "@/app/api/api";
+import { ApiError } from "@/lib/api/api";
 import { useAuthStore } from "@/lib/store/authStore";
 
 import css from "./SignInPage.module.css";
@@ -29,8 +29,7 @@ export default function SignInPage() {
     } catch (error) {
       setError(
         (error as ApiError).response?.data?.error ??
-          (error as ApiError).message ??
-          "Oops... some error",
+          (error as ApiError).message 
       );
     }
   };

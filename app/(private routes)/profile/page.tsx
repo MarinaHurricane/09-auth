@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function Profile() {
-  return <ProfileClient />
+export default async function Profile() {
+  const user = await getMe()
+  return <ProfileClient user={user}/>
 }

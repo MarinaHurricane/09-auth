@@ -4,13 +4,10 @@ import {
   createNoteProps,
   fetchNotesResponseProps,
   LoginRequest,
-  myKey,
   nextServer,
   RegisterRequest,
 } from "./api";
 import { Note } from "@/types/note";
-
-
 
 export const register = async (data: RegisterRequest) => {
   const res = await nextServer.post<User>("/auth/register", data);
@@ -33,50 +30,34 @@ export const getMe = async () => {
 };
 
 export const updateMe = async (username: string) => {
-  const { data } = await nextServer.patch<User>("/users/me", {username});
+  const { data } = await nextServer.patch<User>("/users/me", { username });
   return data;
 };
-
-
 
 export const logout = async (): Promise<void> => {
   await nextServer.post("/auth/logout");
 };
 
 export const createNote = async ({ content, tag, title }: createNoteProps) => {
-  const { data } = await nextServer.post<Note>(
-    "/notes",
-    { content, tag, title },
-    {
-      headers: {
-        Authorization: `Bearer ${myKey}`,
-      },
-    },
-  );
+  const { data } = await nextServer.post<Note>("/notes", {
+    content,
+    tag,
+    title,
+  });
   return data;
 };
 
 type NoteId = Note["id"];
 
 export const deleteNote = async (id: NoteId) => {
-  const { data } = await nextServer.delete<Note>(`/notes/${id}`, {
-    headers: {
-      Authorization: `Bearer ${myKey}`,
-    },
-  });
+  const { data } = await nextServer.delete<Note>(`/notes/${id}`, {});
   return data;
 };
 
 export const fetchNoteById = async (id: Note["id"]) => {
-  const { data } = await nextServer.get<Note>(`/notes/${id}`, {
-    headers: {
-      Authorization: `Bearer ${myKey}`,
-    },
-  });
+  const { data } = await nextServer.get<Note>(`/notes/${id}`);
   return data;
 };
-
-
 
 export const fetchNotes = async (
   page: number = 1,
@@ -84,9 +65,6 @@ export const fetchNotes = async (
   tag?: Note["tag"],
 ) => {
   const { data } = await nextServer.get<fetchNotesResponseProps>("/notes", {
-    headers: {
-      Authorization: `Bearer ${myKey}`,
-    },
     params: {
       page,
       perPage: 12,

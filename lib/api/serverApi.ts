@@ -1,5 +1,5 @@
 import { User } from "@/types/user";
-import { fetchNotesResponseProps, myKey, nextServer } from "./api";
+import { fetchNotesResponseProps, nextServer } from "./api";
 import { cookies } from "next/headers";
 import { Note } from "@/types/note";
 
@@ -31,7 +31,6 @@ export const fetchNotes = async (
       const cookieStore = await cookies();
   const { data } = await nextServer.get<fetchNotesResponseProps>("/notes", {
     headers: {
-      Authorization: `Bearer ${myKey}`,
       Cookie: cookieStore.toString(),
     },
     params: {
@@ -49,7 +48,6 @@ export const fetchNoteById = async (id: Note["id"]) => {
       const cookieStore = await cookies();
   const { data } = await nextServer.get<Note>(`/notes/${id}`, {
     headers: {
-      Authorization: `Bearer ${myKey}`,
       Cookie: cookieStore.toString(),
     },
   });

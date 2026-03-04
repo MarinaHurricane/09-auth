@@ -1,14 +1,17 @@
 'use client'
 
-import { useAuthStore } from "@/lib/store/authStore";
+// import { useAuthStore } from "@/lib/store/authStore";
 import css from './ProfilePage.module.css';
 import Link from "next/link";
 import Image from "next/image";
+import { User } from "@/types/user";
 
+interface ProfileClientProps {
+    user: User;
+}
 
-
-export default function ProfileClient() {
-  const user = useAuthStore((state) => state.user);
+export default function ProfileClient( { user }: ProfileClientProps) {
+//   const user = useAuthStore((state) => state.user);
   return (
     <main className={css.mainContent}>
       <div className={css.profileCard}>
