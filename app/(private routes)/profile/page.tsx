@@ -1,33 +1,32 @@
-import css from "./ProfilePage.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import ProfileClient from "./ProfileClient";
+import type { Metadata } from "next";
+import { getMe } from "@/lib/serverApi";
 
 
+
+export async function generateMetadata(): Promise<Metadata> {
+  const user = await getMe();
+
+  return {
+    title: `profile of ${user.username}`,
+    description: `profile page of ${user.username}`,
+    openGraph: {
+      url: `https://08-zustand-kf5mmf8bz-marynas-projects-3f5c6324.vercel.app/profile`,
+      title: `profile of ${user.username}`,
+      description: `profile page of ${user.username}`,
+      siteName: "Notes App",
+      images: [
+        {
+          url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+          width: 600,
+          height: 300,
+          alt: "Notes App preview image",
+        },
+      ],
+    },
+  };
+}
 
 export default function Profile() {
-  return (
-    <main className={css.mainContent}>
-      <div className={css.profileCard}>
-        <div className={css.header}>
-          <h1 className={css.formTitle}>Profile Page</h1>
-          <Link href="" className={css.editProfileButton}>
-            Edit Profile
-          </Link>
-        </div>
-        <div className={css.avatarWrapper}>
-          {/* <Image
-            src="Avatar"
-            alt="User Avatar"
-            width={120}
-            height={120}
-            className={css.avatar}
-          /> */}
-        </div>
-        <div className={css.profileInfo}>
-          <p>Username: your_username</p>
-          <p>Email: your_email@example.com</p>
-        </div>
-      </div>
-    </main>
-  );
+  return <ProfileClient />
 }
