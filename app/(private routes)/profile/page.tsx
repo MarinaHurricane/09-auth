@@ -1,6 +1,6 @@
 import ProfileClient from "./ProfileClient";
 import type { Metadata } from "next";
-import { getMe } from "@/lib/serverApi";
+import { getMe } from "@/lib/api/serverApi";
 
 
 

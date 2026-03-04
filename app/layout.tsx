@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import SidebarNotes from "./notes/filter/@sidebar/default";
+import SidebarNotes from "./(private routes)/notes/filter/@sidebar/default";
 import TanstackProvider from "@/components/TanStackProvider/TanStackProvider";
 import { Roboto } from "next/font/google";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";

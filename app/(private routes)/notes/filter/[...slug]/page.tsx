@@ -1,4 +1,4 @@
-import { fetchNotes } from "@/lib/serverApi";
+import { fetchNotes } from "@/lib/api/serverApi";
 import {
   QueryClient,
   dehydrate,
