@@ -117,7 +117,8 @@ Possible future improvements include:
 
 Marina  
 
-Frontend developer focused on **JavaScript, React, Next.js, and TypeScript**.
+Software Developer
+JavaScript • React • Next.js • TypeScript
 
 GitHub:  
 https://github.com/MarinaHurricane
