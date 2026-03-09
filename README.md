@@ -115,7 +115,7 @@ Possible future improvements include:
 
 ## Author
 
-Marina  
+Maryna Ishchenko  
 
 Software Developer | JavaScript • React • Next.js • TypeScript
 
