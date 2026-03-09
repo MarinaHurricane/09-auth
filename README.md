@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NoteHub
 
-## Getting Started
+NoteHub is a notes management web application built with **Next.js**, **React**, and **TypeScript**.  
+It allows users to securely create and manage personal notes with authentication, search, filtering, and pagination.
 
-First, run the development server:
+The project was created to practise building a modern web application with structured state management, server-side logic, and API integration.
+
+---
+
+## Live Demo
+
+https://09-auth-chi-roan.vercel.app
+
+## Repository
+
+https://github.com/MarinaHurricane/09-auth
+
+---
+
+## Features
+
+- User registration, login, and logout
+- Protected routes for authenticated users
+- Persistent session handling
+- Create, read, update, and delete notes
+- Search notes by keyword
+- Filter notes by category
+- Paginated note browsing
+- Profile update functionality
+- Responsive user interface
+
+---
+
+## Tech Stack
+
+**Framework**
+- Next.js
+- React
+- TypeScript
+
+**State Management**
+- Zustand
+
+**Application Logic**
+- Server-side logic with Next.js
+- REST API integration
+
+**Styling**
+- CSS with responsive layout techniques
+
+**Deployment**
+- Vercel
+
+---
+
+## What I Practised
+
+This project helped me practise building a modern Next.js application and strengthen skills in:
+
+- authentication and protected routes
+- CRUD operations
+- working with REST APIs
+- managing global application state
+- implementing search, filtering, and pagination
+- structuring scalable React components
+- building responsive user interfaces
+
+---
+
+## Running the Project Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MarinaHurricane/09-auth.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd 09-auth
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+Possible future improvements include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- note sorting functionality
+- richer text editing
+- improved loading and error handling
+- automated testing
+- UI enhancements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Marina  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Frontend developer focused on **JavaScript, React, Next.js, and TypeScript**.
+
+GitHub:  
+https://github.com/MarinaHurricane
