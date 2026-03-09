@@ -117,8 +117,7 @@ Possible future improvements include:
 
 Marina  
 
-Software Developer
-JavaScript • React • Next.js • TypeScript
+Software Developer | JavaScript • React • Next.js • TypeScript
 
 GitHub:  
 https://github.com/MarinaHurricane
